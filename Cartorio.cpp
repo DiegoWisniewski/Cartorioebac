@@ -34,7 +34,7 @@ int registrar() // Função responsável por cadastras os usuários no sistema
 	scanf("%s", nome);
 	
 	file = fopen(arquivo, "a");
-	fprintf(file, "Nome: ");
+	fprintf(file, "Nome: "); // separação por nome
 	fprintf(file,nome);
 	fclose(file);
 	
@@ -46,7 +46,7 @@ int registrar() // Função responsável por cadastras os usuários no sistema
 	scanf("%s", sobrenome);
 	
 	file = fopen(arquivo, "a");
-	fprintf(file, "Sobrenome: ");
+	fprintf(file, "Sobrenome: "); // separação por sobrenome
 	fprintf(file,sobrenome);
 	fclose(file);
 	
@@ -58,7 +58,7 @@ int registrar() // Função responsável por cadastras os usuários no sistema
 	scanf("%s", cargo);
 	
 	file = fopen(arquivo, "a");
-	fprintf(file, "Cargo: ");
+	fprintf(file, "Cargo: "); // separação por cargo
 	fprintf(file,cargo);
 	fclose(file);
 	
@@ -135,6 +135,7 @@ int main()
         printf("\t1 - Regritar nomes\n");
 	    printf("\t2 - Consultar nomes\n");
 	    printf("\t3 - Deletar nomes\n\n");	
+	    printf("\t4 - Sair do Sistema\n\n");
 	    printf("Opção: "); // Final do menu
 	
 	    scanf("%d", &opcao); // Armazenando as escolha do usuário
@@ -153,6 +154,11 @@ int main()
     	    	
     	    case 3:
     	    deletar();
+    	    break;
+    	    
+    	    case 4:
+    	    printf("Obrigado por utilizar o sistema!\n");
+    	    return 0;
     	    break;
     	    
     	    default:
